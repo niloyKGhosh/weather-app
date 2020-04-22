@@ -3,9 +3,9 @@ const forecast = require("./utils/forecast");
 
 geocode("guelph", (error, response) => {
 	console.error("Error : ", error);
-	console.log("Data : ", response);
+	console.log("Geolocation : ", response);
 });
 
 forecast(43.55, -80.25, (error, data) => {
-	console.log(data);
+	console.log("Weather: ", data);
 });
