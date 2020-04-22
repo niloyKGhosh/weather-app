@@ -28,7 +28,3 @@ const forecast = (latitude, longitude, callback) => {
 		}
 	});
 };
-
-forecast(43.55, -80.25, (error, data) => {
-	console.log(data);
-});
