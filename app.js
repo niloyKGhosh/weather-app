@@ -6,12 +6,13 @@ geocode("guelph", (error, geolocation) => {
 		console.log(error);
 		return;
 	}
-	forecast(geolocation.latitude, geolocation.longitude, (error, forecast) => {
+	const { latitude, longitude, location } = geolocation;
+	forecast(latitude, longitude, (error, forecast) => {
 		if (error) {
 			console.log(error);
 			return;
 		}
 		console.log("Weather: ", forecast.temperature);
-		console.log("Location: ", geolocation.location);
+		console.log("Location: ", location);
 	});
 });
