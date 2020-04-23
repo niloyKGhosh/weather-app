@@ -1,18 +1,23 @@
 const geocode = require("./utils/geocode");
 const forecast = require("./utils/forecast");
 
-geocode("guelph", (error, geolocation) => {
+geocode("guelph", (error, { latitude, longitude, location }) => {
 	if (error) {
 		console.log(error);
 		return;
 	}
-	const { latitude, longitude, location } = geolocation;
-	forecast(latitude, longitude, (error, forecast) => {
-		if (error) {
-			console.log(error);
-			return;
+	forecast(
+		latitude,
+		longitude,
+		(error, { temperature, feelsLike, description }) => {
+			if (error) {
+				console.log(error);
+				return;
+			}
+			console.log("Actual: ", temperature);
+			console.log("Feels Like: ", feelsLike);
+			console.log("Description: ", description);
+			console.log("Location: ", location);
 		}
-		console.log("Weather: ", forecast.temperature);
-		console.log("Location: ", location);
-	});
+	);
 });
