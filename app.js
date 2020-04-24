@@ -1,5 +1,8 @@
 const geocode = require("./utils/geocode");
 const forecast = require("./utils/forecast");
+const express = require("express");
+
+const app = express();
 
 geocode("guelph", (error, { latitude, longitude, location }) => {
 	if (error) {
