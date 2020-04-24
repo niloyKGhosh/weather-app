@@ -5,8 +5,12 @@ const path = require("path");
 const app = express();
 
 const public = path.join(__dirname, "../public");
-
+const pathTo404 = path.join(__dirname, "../public/404.html");
 app.use(express.static(public));
+
+app.get("*", (req, res) => {
+	res.sendFile(pathTo404);
+});
 
 geocode("guelph", (error, { latitude, longitude, location }) => {
 	if (error) {
