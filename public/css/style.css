@@ -1,0 +1,19 @@
+body {
+	font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+#error-body {
+	background: #1c2833;
+	color: #fff;
+}
+#page-not-found {
+	margin: 6rem 0;
+}
+#error-code {
+	font-family: "Roboto Mono", monospace;
+	font-size: 12rem;
+	color: #f5b041;
+}
+
+#page-not-found p {
+	font-size: 40px;
+}
