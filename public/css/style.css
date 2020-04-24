@@ -17,3 +17,11 @@ body {
 #page-not-found p {
 	font-size: 40px;
 }
+
+.heart {
+	color: #ac2121;
+}
+
+.footer-text {
+	font-size: 20px;
+}
