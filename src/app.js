@@ -14,28 +14,31 @@ app.get("/weather", (req, res) => {
 			error: "You must provide an address!",
 		});
 	}
-	geocode(req.query.address, (error, { latitude, longitude, location }) => {
-		if (error) {
-			return res.send({ error });
-		}
-
-		forecast(
-			latitude,
-			longitude,
-			(error, { temperature, feelsLike, description }) => {
-				if (error) {
-					return res.send({ error });
-				}
-
-				res.send({
-					temperature,
-					feelsLike,
-					description,
-					location,
-				});
+	geocode(
+		req.query.address,
+		(error, { latitude, longitude, location } = {}) => {
+			if (error) {
+				return res.send({ error });
 			}
-		);
-	});
+
+			forecast(
+				latitude,
+				longitude,
+				(error, { temperature, feelsLike, description }) => {
+					if (error) {
+						return res.send({ error });
+					}
+
+					res.send({
+						temperature,
+						feelsLike,
+						description,
+						location,
+					});
+				}
+			);
+		}
+	);
 });
 
 app.get("*", (req, res) => {
