@@ -8,6 +8,10 @@ body {
 	min-height: 400px;
 }
 
+.weatherIcon {
+	font-size: 2rem;
+	color: #000;
+}
 #error-body {
 	background: #1c2833;
 	color: #fff;
