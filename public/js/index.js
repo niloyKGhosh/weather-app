@@ -15,7 +15,7 @@ const iconObject = {
 };
 
 const selectWeatherIcons = (weatherDescription) => {
-	const desc = weatherDescription.toLowercase();
+	const desc = weatherDescription.toLowerCase();
 
 	if (desc.includes("sun")) {
 		return iconObject.sunny;
@@ -43,7 +43,12 @@ weatherForm.addEventListener("submit", (e) => {
 
 				temperature.textContent = weatherData.error;
 			} else {
-				weatherIcon.innerHTML = iconObject.rain;
+				weatherIcon.innerHTML = selectWeatherIcons(
+					weatherData.description[0]
+				);
+				temperature.textContent = weatherData.temperature;
+				description.textContent = weatherData.description[0];
+				requestLocation.textContent = weatherData.location;
 			}
 		});
 	});
