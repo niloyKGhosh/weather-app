@@ -29,4 +29,4 @@ Weather application based on [Andrew Mead's udemy course](https://www.udemy.com/
 
 ## Live Demo
 
--   Check it out live at [Find My Weather](https://nghosh-weather-app.herokuapp.com/)
+Check it out live at [Find My Weather](https://nghosh-weather-app.herokuapp.com/)
