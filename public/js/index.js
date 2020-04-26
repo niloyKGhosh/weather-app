@@ -3,10 +3,11 @@ const weatherForm = document.querySelector("form");
 const weatherIcon = document.querySelector(".weatherIcon");
 const temperature = document.querySelector("#temperature");
 const description = document.querySelector("#weatherDescription");
+const feelsLike = document.querySelector("#feelsLike");
 const requestLocation = document.querySelector("#location");
 
 const iconObject = {
-	rain: '<i class="wi wi-rain-mix weatherIcon"></i>',
+	rain: '<i class="wi wi-storm-showers weatherIcon"></i>',
 	snow: '<i class="wi wi-snow weatherIcon"></i>',
 	sunny: '<i class="wi wi-day-sunny weatherIcon"></i>',
 	cloudy: '<i class="wi wi-cloudy weatherIcon"></i>',
@@ -19,7 +20,12 @@ const selectWeatherIcons = (weatherDescription) => {
 
 	if (desc.includes("sun")) {
 		return iconObject.sunny;
-	} else if (desc.includes("rain") || desc.includes("shower")) {
+	} else if (
+		desc.includes("rain") ||
+		desc.includes("shower") ||
+		desc.includes("drizzle") ||
+		desc.includes("blizzard")
+	) {
 		return iconObject.rain;
 	} else if (desc.includes("snow")) {
 		return iconObject.snow;
@@ -46,7 +52,9 @@ weatherForm.addEventListener("submit", (e) => {
 				weatherIcon.innerHTML = selectWeatherIcons(
 					weatherData.description[0]
 				);
-				temperature.textContent = weatherData.temperature;
+				temperature.textContent = weatherData.temperature + "°C";
+				feelsLike.textContent =
+					"Feels like " + weatherData.feelsLike + "°C";
 				description.textContent = weatherData.description[0];
 				requestLocation.textContent = weatherData.location;
 			}
