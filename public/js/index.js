@@ -1,6 +1,10 @@
 const locationInput = document.querySelector("#weatherInput");
 const weatherForm = document.querySelector("form");
-const weatherIcon = document.querySelector(".weather-icon");
+const weatherIcon = document.querySelector(".weatherIcon");
+const temperature = document.querySelector("#temperature");
+const description = document.querySelector("#weatherDescription");
+const requestLocation = document.querySelector("#location");
+
 const iconObject = {
 	rain: '<i class="wi wi-rain-mix weatherIcon"></i>',
 	snow: '<i class="wi wi-snow weatherIcon"></i>',
@@ -35,9 +39,11 @@ weatherForm.addEventListener("submit", (e) => {
 	fetch(address).then((response) => {
 		response.json().then((weatherData) => {
 			if (weatherData.error) {
-				console.log(weatherData.error);
+				temperature.classList.add("text-danger");
+
+				temperature.textContent = weatherData.error;
 			} else {
-				console.log(weatherData.location, weatherData.temperature);
+				weatherIcon.innerHTML = iconObject.rain;
 			}
 		});
 	});
