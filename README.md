@@ -19,9 +19,9 @@ Weather application based on [Andrew Mead's udemy course](https://www.udemy.com/
 ## Getting Started
 
 1. Install dependencies
-   `bash npm install`
+   ```npm install```
 2. Start the server
-   `bash npm run dev`
+   ```npm run dev```
 
 ## Live Demo
 
