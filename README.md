@@ -1,6 +1,7 @@
 # Find My Weather
 
 Weather application based on [Andrew Mead's udemy course](https://www.udemy.com/course/the-complete-nodejs-developer-course-2/)
+![Weather App image](https://github.com/niloyKGhosh/weather-app/blob/master/Weather-App.png)
 
 ## API For Getting the Weather Information
 
