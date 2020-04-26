@@ -3,7 +3,7 @@
 Weather application based on [Andrew Mead's udemy course](https://www.udemy.com/course/the-complete-nodejs-developer-course-2/)
 ![Weather App image](https://github.com/niloyKGhosh/weather-app/blob/master/Weather-App.png)
 
-## API For Getting the Weather Information
+## API For Getting the Weather Information and Icons
 
 -   [Weather Stack API](https://weatherstack.com/)
 -   [Icon Pack](https://erikflowers.github.io/weather-icons/)
@@ -15,3 +15,14 @@ Weather application based on [Andrew Mead's udemy course](https://www.udemy.com/
 -   [BootStrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
 -   [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 -   [node.js](https://nodejs.org/en/docs/)
+
+## Getting Started
+
+1. Install dependencies
+   `npm install`
+2. Start the server
+   `npm run dev`
+
+## Live Demo
+
+-   Check it out live at [Find My Weather](https://nghosh-weather-app.herokuapp.com/)
