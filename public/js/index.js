@@ -46,12 +46,18 @@ weatherForm.addEventListener("submit", (e) => {
 		response.json().then((weatherData) => {
 			if (weatherData.error) {
 				temperature.classList.add("text-danger");
-
+				temperature.setAttribute("style", "font-size: 17px");
 				temperature.textContent = weatherData.error;
+				weatherIcon.innerHTML = "";
+				feelsLike.textContent = "";
+				description.textContent = "";
+				requestLocation.textContent = "";
 			} else {
 				weatherIcon.innerHTML = selectWeatherIcons(
 					weatherData.description[0]
 				);
+				temperature.classList.remove("text-danger");
+				temperature.removeAttribute("style");
 				temperature.textContent = weatherData.temperature + "°C";
 				feelsLike.textContent =
 					"Feels like " + weatherData.feelsLike + "°C";
