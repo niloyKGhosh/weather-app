@@ -4,8 +4,8 @@ Weather application based on [Andrew Mead's udemy course](https://www.udemy.com/
 
 ## API For Getting the Weather Information
 
-[Weather Stack](https://weatherstack.com/)
-[Icon Pack](https://erikflowers.github.io/weather-icons/)
+-   [Weather Stack API](https://weatherstack.com/)
+-   [Icon Pack](https://erikflowers.github.io/weather-icons/)
 
 ## Languages and Frameworks used
 
