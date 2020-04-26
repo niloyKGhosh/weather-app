@@ -41,7 +41,7 @@ const selectWeatherIcons = (weatherDescription) => {
 weatherForm.addEventListener("submit", (e) => {
 	e.preventDefault();
 	const loc = locationInput.value;
-	const address = "http://localhost:3000/weather?address=" + loc;
+	const address = "/weather?address=" + loc;
 	fetch(address).then((response) => {
 		response.json().then((weatherData) => {
 			if (weatherData.error) {
