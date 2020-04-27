@@ -8,7 +8,7 @@ Weather application based on [Andrew Mead's udemy course](https://www.udemy.com/
 -   [Weather Stack API](https://weatherstack.com/)
 -   [Icon Pack](https://erikflowers.github.io/weather-icons/)
 
-## Languages and Frameworks used
+## Built With
 
 -   [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
 -   [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
