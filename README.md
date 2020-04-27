@@ -31,4 +31,4 @@
 
 ## Live Demo
 
-###### Check it out live at [Find My Weather](https://nghosh-weather-app.herokuapp.com/)
+###### :snowflake: Check it out live at [Find My Weather](https://nghosh-weather-app.herokuapp.com/)
