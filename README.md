@@ -2,7 +2,7 @@
 
 ![Weather App image](https://github.com/niloyKGhosh/weather-app/blob/master/Weather-App.png)
 
-###### This is a weather app developed from the [Weather Stack API](https://weatherstack.com/).
+###### This is a weather app developed using the [Weather Stack API](https://weatherstack.com/).
 
 ## Getting Started
 
