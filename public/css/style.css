@@ -1,6 +1,8 @@
 body {
 	font-family: "Poppins", Arial, Helvetica, sans-serif;
 	color: #585858;
+	height: 100vh;
+	overflow: hidden;
 }
 
 .weather-app {
